@@ -1,18 +1,34 @@
-<div class="container">
-  <h1>My To-Do List</h1>
-  <p>You can <span >Add</span>, Edit, and Remove Tasks, Mark them as Completed</p>
-  <div class="form">
-    <input type="text" [(ngModel)]="newItem" placeholder="Add item" required>
-    <button type="submit" (click)="addItem()" class="add">Add</button>
+<div class="main pt-3">
+<div class="container my-3">
+  <h1><i class="fa-solid fa-forward-step text-danger"></i> Task Track</h1>
+  <p class="mb-4">You can <span >Add</span>, Edit, and Remove Tasks, Mark them as Completed</p>
+  <div class="d-flex">
+
+
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text h-100 bg-dark text-light" id="basic-addon1"><i class="fa-solid fa-table-list"></i></span>
+  </div>
+  <input type="text" class="form-control" [(ngModel)]="newItem" placeholder="Add Your Task....." required aria-label="Username" aria-describedby="basic-addon1">
+  <button type="submit" (click)="addItem()" class="btn btn-success w-25">Add <i class="fa fa-plus" aria-hidden="true"></i>
+  </button>
+</div>
+    <!-- <input class="form-control w-75" type="text" [(ngModel)]="newItem" placeholder="Add item" required> -->
+
   </div>
 
+  <div class="my-2">
   <ul>
-    <li *ngFor="let item of items; let i = index;">
-      <span [ngClass]="{completed: item.completed}"><input type="checkbox"> {{item.name}}</span>
+    <br>
+    <li *ngFor="let item of items; let i = index;" class="border-top">
+      <span [ngClass]="{completed: item.completed}" class="spanLi"><input type="checkbox" class="custom-control-input" >   {{item.name}}</span>
       <div>
-      <button class="edit" (click)="editItem(i)">Edit</button>
-      <button class="remove" (click)="removeItem(i)">Remove</button>
+      <button class="btn btn-warning" (click)="editItem(i)"><i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
+      <button class="btn btn-danger" (click)="removeItem(i)"><i class="fas fa-trash-alt"></i></button>
     </div>
     </li>
   </ul>
+</div>
+</div>
 </div>

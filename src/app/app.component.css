@@ -1,5 +1,11 @@
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+}
+.main{
+  background-image: url('https://img3.wallspic.com/previews/2/8/9/0/20982/20982-firewatch-ecoregion-landscape-horizon-video_games-x750.jpg');
+  height: 100vh;
+  background-repeat: inherit;
 }
 .container {
     max-width: 600px;
@@ -19,13 +25,13 @@ body{
     margin-bottom: 20px;
   }
   
-  input[type="text"] {
+  /* input[type="text"] {
     flex-grow: 1;
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid #343a40;
     padding: 5px;
-  }
+  } */
   
   button {
     border: none;
@@ -35,12 +41,12 @@ body{
     margin-left: 5px;
     border-radius: 5px;
   }
-  .edit{
+  /* .edit{
     background-color: #ffc107;
   }
   .edit:hover{
     background-color: #fff;
-    padding: 7px 13px;
+    padding: 5px 12px;
     color: #ffc107;
     border: 2px solid #ffc107;
   }
@@ -49,10 +55,10 @@ body{
   }
   .remove:hover{
     background-color: #fff;
-    padding: 7px 13px;
+    padding: 5px 12px;
     color: #dc3545;
     border: 2px solid #dc3545;
-  }
+  } */
 
   .add{
     background-color: #28a745;
@@ -82,9 +88,9 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     padding: 10px;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     border-radius: 5px;
   }
   
